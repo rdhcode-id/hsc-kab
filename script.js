@@ -36,7 +36,7 @@ if (!localStorage.getItem("data_tps")) {
         "Aia Gadang Timur",
         "Suko Mananti Aua Kuniang",
         "Pinaga Aua Kuniang",
-        "Luak Landua Aua Kuniang",
+        "Lubuak Landua Aua Kuniang",
         "Lembah Binuang Aua Kuniang",
         "Lingkuang Aua",
         "Lingkuang Aua Timur",
