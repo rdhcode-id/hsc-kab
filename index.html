@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hitung Suara Caleg - Kabupaten Pasbar</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
+
+</head>
+
+<body>
+
+  <div class="form-wrapper">
+    <h2 style="">Form Input Suara Caleg</h2>
+    <form id="inputForm">
+      <label for="kecamatan">Kecamatan:</label>
+      <select id="kecamatan" name="kecamatan">
+        <option value="">Pilih Kecamatan</option>
+        <!-- Options akan di-generate menggunakan JavaScript -->
+      </select>
+
+      <label for="nagari">Nagari:</label>
+      <select id="nagari" name="nagari">
+        <option value="">Pilih Nagari</option>
+        <!-- Options akan di-generate menggunakan JavaScript -->
+      </select>
+
+      <label for="nomorTPS">Nomor TPS:</label>
+      <select id="nomorTPS" name="nomorTPS">
+        <option value="">Pilih TPS</option>
+        <!-- Options akan di-generate menggunakan JavaScript -->
+      </select>
+
+      <label for="nomorPartai">Nomor Partai:</label>
+      <select id="nomorPartai" name="nomorPartai">
+        <option value="">Pilih Partai</option>
+        <!-- Options akan di-generate menggunakan JavaScript -->
+      </select>
+
+      <label for="nomorUrutCalon">Nomor Urut Calon:</label>
+      <select id="nomorUrutCalon" name="nomorUrutCalon">
+        <option value="">Pilih Nomor Urut</option>
+        <!-- Options akan di-generate menggunakan JavaScript -->
+      </select>
+
+      <label for="suara">Suara (Angka):</label>
+      <input type="number" id="suara" name="suara" value="0">
+
+      <button type="button" onclick="simpanSuara()">Simpan</button>
+      <button class="refres" type=" button" onclick="refreshHalaman()">Refres</button>
+      <button class="hapus" type="button" onclick="hapusSemuaDataLocalStorage()">Hapus Semua</button>
+    </form>
+  </div>
+
+  <div>
+    <h3>Perolehan Suara Partai</h2>
+      <div id="hasilPemilu" class="table-container">
+      </div>
+  </div>
+  <div>
+    <h2>TPS Sudah di Input</h2>
+    <div id="tpsMasuk">
+      <!-- Hasil akan ditampilkan di sini -->
+    </div>
+  </div>
+
+  <button class="btnExport" onclick=" exportToExcel()">Download Data Excel</button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
